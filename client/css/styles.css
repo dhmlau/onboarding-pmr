@@ -1,0 +1,61 @@
+body {
+  padding-top:0px;
+}
+.glyphicon-remove:hover {
+  cursor:pointer
+}
+
+.container {
+    margin-left: 10px;
+}
+
+md-content {
+    background-color: white;
+}
+
+.md-toolbar-tools  {
+	/*font-family: Calibri;*/
+	color: white;
+	position: relative;
+	width: 100%;
+    height: 100vh;
+}
+
+md-toolbar * {
+    color:white;
+}
+
+md-nav-ink-bar {
+    color: rgb(255, 64, 129);
+}
+
+md-list-item:hover {
+    background: #EEEEEE;
+}
+
+md-list-item i.list-action-icon {
+    visibility:hidden;
+}
+
+md-list-item:hover i.list-action-icon {
+    padding-top: 30px;
+    visibility:visible;
+    color: darkblue;
+}
+
+
+.pmr-details-table {
+  width: 100%;
+}
+.pmr-details-table .title {
+    width: 100px;
+}
+.pmr-details-table tr:nth-child(odd) td {
+  background-color: white;
+}
+
+.logTapmr-details-tableble tr:nth-child(even) td {
+  background-color: #E0E0E0;
+}
+
+

@@ -1,0 +1,50 @@
+{
+  "name": "PMR",
+  "plural": "PMRs",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "PMRID": {
+      "type": "string",
+      "required": true,
+      "id": true
+    },
+    "ABSTRACT": {
+      "type": "string"
+    },
+    "SEVERITY": {
+      "type": "string"
+    },
+    "STATUS": {
+      "type": "string"
+    },
+    "CUSTNAME": {
+      "type": "string"
+    },
+    "CUSTOMERID": {
+      "type": "string"
+    },
+    "PRODUCTNAME": {
+      "type": "string"
+    },
+    "PRIORITY": {
+      "type": "string"
+    },
+    "CREATEDON": {
+      "type": "date"
+    },
+    "MODIFIEDON": {
+      "type": "date"
+    }, 
+    "COMPID": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

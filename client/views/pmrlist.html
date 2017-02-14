@@ -1,0 +1,27 @@
+<md-content>
+    <md-list flex>
+        <md-list-item class="md-3-line" ng-repeat="pmr in pmrs" >
+            <md-button class="md-fab" ng-style="pmr.SEVERITY==='1' && {'background-color':'red'} || pmr.SEVERITY==='2' && {'background-color':'orange'} || pmr.SEVERITY==='3' && {'background-color':'yellow'} || pmr.SEVERITY==='4' && {'background-color':'green'}">{{pmr.SEVERITY}}</md-button>           
+            <div class="md-list-item-text" layout="column">
+                <h3>{{pmr.ABSTRACT}}</h3>
+                <h4>{{pmr.PMRID}}</h4>
+                <p>Severity:{{pmr.SEVERITY}}, Priority: {{pmr.PRIORITY}}</p>
+                <md-divider ></md-divider>
+            </div>
+            <div style="width:20%">
+                <div flex></div>
+                    <i class="material-icons list-action-icon" ng-click="openPMRDetails(pmr, true)">launch</i>
+                    <i class="material-icons list-action-icon" ng-click="editPMRDetails(pmr, false)">mode_edit</i>
+                    <i class="material-icons list-action-icon" ng-click="deletePMR(pmr)">delete_sweep</i>
+            </div>
+        </md-list-item>
+    </md-list>
+
+    <md-button aria-label="Add" class="md-fab" ng-click="editPMRDetails(null, true)">
+        <md-icon>
+            <i class="material-icons">add</i>
+        </md-icon>    
+    </md-button>
+
+
+</md-content>

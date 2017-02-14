@@ -1,0 +1,99 @@
+<md-dialog aria-label="PMR Details" style="width:200vh;height:300vh">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>PMR Details</h2>
+                <span flex></span>
+				<md-button class="md-icon-button" ng-click="cancel()">
+					<md-icon>
+                        <i class="material-icons">clear</i>
+                    </md-icon>
+				</md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content style="padding:10px">
+            <div class="md-dialog-content">
+                <table class="pmr-details-table"> 
+                    <tbody>
+                        <form>
+                               
+                            <div class="form-group" >
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>PMR ID</label>
+                                    <input ng-disabled="!isNew" required name="pmrid" placeholder="PMR ID" type="text" class="form-control" id="pmrid" ng-model="pmr.PMRID">
+                                
+                                 </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>PMR Abstract</label>
+                                    <input required name="abstract" placeholder="Abstract" type="text" class="form-control" id="abstract" ng-model="pmr.ABSTRACT">
+                                </md-input-container>
+
+                                
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Status</label>
+                                    <md-select ng-model="pmr.STATUS" placeholder="{{pmr.STATUS}}">
+                                        <md-option value="OPEN">OPEN</md-option>
+                                        <md-option value="CLOSED">CLOSED</md-option>
+                                    </md-select>
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Severity</label>
+                                    <md-select ng-model="pmr.SEVERITY" placeholder="{{pmr.SEVERITY}}">
+                                        <md-option value="1">1</md-option>
+                                        <md-option value="2">2</md-option>
+                                        <md-option value="3">3</md-option>
+                                        <md-option value="4">4</md-option>
+                                    </md-select>
+                                    
+                                </md-input-container>
+                            
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Priority</label>
+                                    <md-select ng-model="pmr.PRIORITY">
+                                        <md-option value="1">1</md-option>
+                                        <md-option value="2">2</md-option>
+                                        <md-option value="3">3</md-option>
+                                        <md-option value="4">4</md-option>
+                                    </md-select>
+
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Customer name</label>
+                                    <input required name="custname" placeholder="Customer name" type="text" class="form-control" id="custname" ng-model="pmr.CUSTNAME">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Created on</label>
+                                    <input disabled required name="createdon" placeholder="" type="text" class="form-control" id="createdon" ng-model="pmr.CREATEDON">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Modified on</label>
+                                    <input disabled required name="modifiedon" placeholder="" type="text" class="form-control" id="modifiedon" ng-model="pmr.MODIFIEDON">
+                                </md-input-container>
+
+                                
+                            </div>
+
+                            
+                            
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+            <span flex></span>
+        </md-dialog-content>
+        <md-divider></md-divider>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+			<md-button ng-click="ok()" ng-disabled="okBtnDisabled()" type="submit" form="pForm">Submit</md-button>
+			<md-button ng-click="cancel()">Cancel</md-button>
+
+		</md-dialog-actions>
+
+    </form>
+</md-dialog>

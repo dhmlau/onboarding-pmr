@@ -1,0 +1,68 @@
+<md-dialog aria-label="PMR Details" style="width:200vh;height:50vh">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>PMR Details</h2>
+                <span flex></span>
+				<md-button class="md-icon-button" ng-click="cancel()">
+					<md-icon>
+                        <i class="material-icons">clear</i>
+                    </md-icon>
+				</md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content style="padding:10px">
+            <div class="md-dialog-content">
+                <table class="pmr-details-table"> 
+                    <tbody>
+                        <form>
+                            <tr>
+                                <td class="title">PMR Abstract</td>
+                                <td>{{pmr.ABSTRACT}}</td>
+                            </tr>
+                            <tr>
+                                <td>PMR ID</td>
+                                <td>{{pmr.PMRID}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{pmr.STATUS}}</td>
+                            </tr>
+                            <tr>
+                                <td>Customer</td>
+                                <td>{{pmr.CUSTNAME}}</td>
+                            </tr>
+                            <tr>
+                                <td>Severity</td>
+                                <td>{{pmr.SEVERITY}}</td>
+                            </tr>
+                            <tr>
+                                <td>Priorit</td>
+                                <td>{{pmr.PRIORITY}}</td>
+                            </tr>
+                            <tr>
+                                <td>Created on</td>
+                                <td>{{pmr.CREATEDON}}</td>
+                            </tr>
+                            <tr>
+                                <td>Modified on</td>
+                                <td>{{pmr.MODIFIEDON}}</td>
+                            </tr>
+                            
+                            
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+            <span flex></span>
+        </md-dialog-content>
+        <md-divider></md-divider>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+			<md-button ng-click="cancel()">Close</md-button>
+
+		</md-dialog-actions>
+
+    </form>
+</md-dialog>

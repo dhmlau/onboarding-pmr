@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "pmrds": {
+    "host": "somehost.ibm.com",
+    "port": 50000,
+    "database": "PMR_DB",
+    "password": "somepassword",
+    "name": "pmrds",
+    "dsn": "",
+    "user": "Administrator",
+    "schema": "Administrator",
+    "connector": "db2"
+  }
+}
